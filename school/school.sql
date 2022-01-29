@@ -19,19 +19,25 @@ CREATE TABLE students (
 CREATE TABLE courses (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
-  description TEXT,
+  description TEXT
 );
 
 CREATE TABLE teachers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name TEXT,
   last_name TEXT,
-  bio TEXT,
+  bio TEXT
 );
 
 CREATE TABLE sections (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   time TEXT,
   course_id INTEGER,
-  teacher_id INTEGER,
+  teacher_id INTEGER
 );
+
+CREATE TABLE enrollments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  student_id INTEGER,
+  section_id  INTEGER
+)
